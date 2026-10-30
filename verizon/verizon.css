@@ -1,0 +1,413 @@
+/* Verizon case study — extends the shared Spectrum editorial system */
+
+.verizon-study .vz-hero-grid {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: var(--space-6);
+}
+
+.verizon-study .spectrum-hero h1 {
+  font-size: clamp(36px, 3.6vw, 56px);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.verizon-study .vz-hero-media {
+  justify-content: center;
+}
+
+.verizon-study .vz-hero-media img {
+  width: auto;
+  max-width: 100%;
+  max-height: 640px;
+}
+
+.verizon-study .vz-meta {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+/* Cards */
+
+.vz-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.vz-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--spectrum-line);
+  background: #fff;
+}
+
+.verizon-study .vz-card h3 {
+  font-size: clamp(22px, 2vw, 28px);
+  letter-spacing: -0.02em;
+}
+
+.vz-note {
+  color: var(--spectrum-muted) !important;
+  font-size: 13px !important;
+}
+
+/* Navy panel + convergence diagram */
+
+.verizon-study .vz-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+  width: 100%;
+  margin-top: var(--space-3);
+  padding: var(--space-6);
+  border-radius: 32px;
+  background-color: var(--spectrum-navy);
+  background-image: radial-gradient(circle, rgb(255 255 255 / 22%) 1px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+.verizon-study .vz-panel h3,
+.verizon-study .vz-panel p {
+  color: #fff;
+}
+
+.verizon-study .vz-panel .vz-note {
+  color: #b7c4f4 !important;
+}
+
+.vz-converge {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr) 96px minmax(0, 1fr);
+  align-items: center;
+}
+
+.vz-converge-inputs,
+.vz-ia-inputs {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vz-converge-inputs li {
+  display: flex;
+  height: 56px;
+  align-items: center;
+  padding-inline: 20px;
+  border: 1px solid #44517c;
+  border-radius: 12px;
+  background: #1b2b5b;
+  color: #fff;
+  font-size: 14px;
+}
+
+.vz-converge-lines {
+  align-self: stretch;
+  margin-block: 28px;
+  border: 2px solid #aebbff;
+  border-left: 0;
+  border-radius: 0 12px 12px 0;
+  position: relative;
+}
+
+.vz-converge-lines::after {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 40%;
+  height: 2px;
+  background: #aebbff;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.vz-converge-output {
+  display: flex;
+  min-height: 56px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: #dce3ff;
+  color: #182550;
+  font-family: var(--spectrum-serif);
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.15;
+  margin-left: 40%;
+}
+
+/* Information architecture diagram */
+
+.vz-ia {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: var(--space-3);
+  padding: var(--space-5);
+  border: 1px solid var(--spectrum-line);
+  background: #fff;
+}
+
+.vz-ia-inputs {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.vz-ia-inputs li {
+  padding: 16px 20px;
+  border: 1px solid var(--spectrum-blue);
+  border-radius: 12px;
+  color: var(--spectrum-blue);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.vz-ia-lines {
+  display: block;
+  height: 48px;
+  margin-inline: 12.5%;
+  border: 2px solid var(--spectrum-blue);
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
+  position: relative;
+}
+
+.vz-ia-lines::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 2px;
+  height: 24px;
+  background: var(--spectrum-blue);
+  content: "";
+}
+
+.vz-ia-unified {
+  margin-top: 24px;
+  padding: var(--space-4);
+  border-radius: 12px;
+  background: var(--spectrum-blue);
+  color: #fff;
+  font-family: var(--spectrum-serif);
+  font-size: clamp(22px, 2.4vw, 32px);
+  text-align: center;
+}
+
+.vz-considerations {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vz-considerations li {
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--spectrum-line);
+  font-size: 15px;
+}
+
+/* Screenshot gallery */
+
+.vz-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-3) 0 0;
+}
+
+.vz-gallery figure {
+  margin: 0;
+}
+
+.vz-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgb(16 27 67 / 12%);
+}
+
+@media (max-width: 1100px) {
+  .verizon-study .vz-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .verizon-study .vz-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vz-considerations {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vz-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .vz-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .verizon-study .vz-panel {
+    padding: var(--space-4);
+  }
+
+  .vz-converge {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .vz-converge-lines {
+    display: none;
+  }
+
+  .vz-converge-output {
+    margin-left: 0;
+  }
+
+  .vz-ia {
+    padding: var(--space-3);
+  }
+
+  .vz-ia-inputs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vz-ia-lines {
+    display: none;
+  }
+
+  .vz-considerations {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .verizon-study .vz-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .vz-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2);
+  }
+}
+
+/* Research / design images */
+
+.vz-figure {
+  width: 100%;
+  margin: var(--space-3) 0 0;
+}
+
+.vz-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--spectrum-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.vz-context-label {
+  margin-top: var(--space-4) !important;
+}
+
+.vz-gallery-small {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 720px;
+  margin-top: 0;
+}
+
+.verizon-study .vz-insight {
+  margin-top: var(--space-3);
+}
+
+.verizon-study .vz-insight .spectrum-kicker {
+  color: #b7c4f4;
+}
+
+.verizon-study .vz-insight h3 {
+  font-size: clamp(24px, 2.6vw, 36px);
+}
+
+.vz-concepts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin-top: var(--space-3);
+}
+
+.vz-concept {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.vz-concept img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--spectrum-line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.vz-concept figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+  color: #555b68;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.vz-table-wrap {
+  overflow-x: auto;
+}
+
+.vz-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 15px;
+}
+
+.vz-table th,
+.vz-table td {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--spectrum-line);
+  color: #555b68;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.vz-table thead th {
+  color: var(--spectrum-blue);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.vz-table tbody th {
+  color: var(--spectrum-ink);
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .vz-concepts {
+    grid-template-columns: 1fr;
+  }
+}

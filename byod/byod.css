@@ -1,0 +1,420 @@
+.byod-study .byod-shot {
+  margin: var(--space-5) 0 0;
+  width: 100%;
+}
+
+.byod-study .byod-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #dfe3ee;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.byod-study .byod-shot figcaption {
+  margin-top: var(--space-2);
+  font-size: 0.875rem;
+  color: #5c647a;
+}
+
+.byod-study .byod-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: var(--space-6);
+  align-items: center;
+  margin-top: var(--space-5);
+}
+
+.byod-study .byod-split.reverse {
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+}
+
+.byod-study .byod-split.reverse > :first-child {
+  order: 2;
+}
+
+.byod-study .byod-split .byod-shot {
+  margin: 0;
+}
+
+.byod-study .byod-split h3 {
+  margin: 0 0 var(--space-2);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.byod-study .byod-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.byod-study .byod-pair .byod-shot {
+  margin: 0;
+}
+
+.byod-study .byod-funnel {
+  margin-top: var(--space-5);
+  padding: var(--space-6);
+  border: 1px solid #dfe3ee;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.byod-study .byod-funnel h3,
+.byod-study .byod-steps h3 {
+  margin: 0 0 var(--space-4);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.byod-study .byod-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 8px;
+  color: #fff;
+  background: #0b1f5c;
+}
+
+.byod-study .byod-bar + .byod-bar {
+  margin-top: var(--space-2);
+}
+
+.byod-study .byod-bar strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.byod-study .byod-bar.b2 { width: 59%; background: #2563eb; }
+.byod-study .byod-bar.b3 { width: 41%; background: #e9eefc; color: #0b1f5c; }
+
+.byod-study .byod-note {
+  margin-top: var(--space-3);
+  font-size: 0.875rem;
+  color: #5c647a;
+}
+
+.byod-study .byod-steps {
+  margin-top: var(--space-5);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.byod-study .byod-steps > div {
+  padding: var(--space-5);
+  border: 1px solid #dfe3ee;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.byod-study .byod-compare {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.byod-study .byod-compare .from {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.5rem;
+  color: #8a91a6;
+  text-decoration: line-through;
+}
+
+.byod-study .byod-compare .to {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: #1d4ed8;
+}
+
+.byod-study .byod-steps small {
+  display: block;
+  margin-top: var(--space-2);
+  color: #5c647a;
+}
+
+.byod-study .byod-journey {
+  margin-top: var(--space-5);
+  display: grid;
+  grid-template-columns: 120px repeat(4, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.byod-study .byod-journey > div {
+  padding: var(--space-3);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.byod-study .byod-journey .head {
+  padding: 0 var(--space-3);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.byod-study .byod-journey .row-label {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+}
+
+.byod-study .byod-journey .cur { background: #1a2b52; color: #fff; }
+.byod-study .byod-journey .cur.row-label { background: #001447; }
+.byod-study .byod-journey .pro { background: #eaf1ff; color: #001447; }
+.byod-study .byod-journey .pro.row-label { background: #0a5cff; color: #fff; }
+
+.byod-study .byod-video {
+  position: relative;
+  margin-top: var(--space-5);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #0b1f5c;
+}
+
+.byod-study .byod-video video,
+.byod-study .byod-video .poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.byod-study .byod-video .poster {
+  opacity: 0.4;
+}
+
+.byod-study .byod-video .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(11, 31, 92, 0.55), rgba(11, 31, 92, 0.85));
+}
+
+.byod-study .byod-video h3 {
+  margin: 0;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.byod-study .byod-video p {
+  max-width: 560px;
+  margin: 0;
+  color: #e4e8f4;
+}
+
+.byod-study .byod-play {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: #1d4ed8;
+  font-size: 1.5rem;
+  padding-left: 4px;
+}
+
+.byod-study .byod-video .tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #cfd8f5;
+}
+
+.byod-study .byod-link {
+  display: inline-block;
+  margin-top: var(--space-3);
+  color: #1d4ed8;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.byod-study .byod-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.byod-study .byod-stat strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3.25rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #1d4ed8;
+}
+
+.byod-study .byod-stat span {
+  display: block;
+  margin-top: var(--space-2);
+  color: #3b4258;
+}
+
+.byod-study .byod-quote {
+  margin: var(--space-5) 0 0;
+  padding: var(--space-5);
+  border-left: 3px solid #1d4ed8;
+  background: #f3f6fe;
+  border-radius: 0 12px 12px 0;
+}
+
+.byod-study .byod-quote p {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+
+.byod-study .byod-quote cite {
+  display: block;
+  margin-top: var(--space-2);
+  font-style: normal;
+  font-size: 0.875rem;
+  color: #5c647a;
+}
+
+.byod-study .byod-closing {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.75rem;
+  line-height: 1.35;
+}
+
+.byod-study .byod-meta-wide {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .byod-study .byod-split,
+  .byod-study .byod-split.reverse,
+  .byod-study .byod-pair,
+  .byod-study .byod-steps,
+  .byod-study .byod-stats {
+    grid-template-columns: 1fr;
+  }
+
+
+  .byod-study .byod-journey {
+    grid-template-columns: 1fr;
+  }
+
+  .byod-study .byod-journey .head {
+    display: none;
+  }
+
+  .byod-study .byod-bar.b2,
+  .byod-study .byod-bar.b3 {
+    width: 100%;
+  }
+
+  .byod-study .byod-meta-wide {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.byod-study .byod-hero-cta {
+  margin: var(--space-2) 0 0;
+}
+
+.byod-study .byod-btn {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: 999px;
+  background: var(--spectrum-blue, #1d4ed8);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.byod-study .byod-btn:hover,
+.byod-study .byod-btn:focus-visible {
+  background: #0b1f5c;
+}
+
+.byod-study #prototype-video {
+  scroll-margin-top: 120px;
+}
+
+/* Text left, screenshots right */
+.byod-study .byod-split,
+.byod-study .byod-split.reverse {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  text-align: left;
+}
+
+.byod-study .byod-split.reverse > :first-child {
+  order: 0;
+}
+
+@media (max-width: 900px) {
+  .byod-study .byod-split,
+  .byod-study .byod-split.reverse {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scroll animation for figures and bars */
+@media (prefers-reduced-motion: no-preference) {
+  .byod-motion-ready :is(.byod-shot, .byod-stat, .byod-steps > div, .spectrum-hero-stat, .byod-journey) {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .byod-motion-ready :is(.byod-shot, .byod-stat, .byod-steps > div, .spectrum-hero-stat, .byod-journey).is-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .byod-motion-ready .byod-bar {
+    clip-path: inset(0 100% 0 0 round 8px);
+    transition: clip-path 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .byod-motion-ready .byod-funnel.is-in .byod-bar { clip-path: inset(0 0 0 0 round 8px); }
+  .byod-motion-ready .byod-funnel.is-in .byod-bar.b2 { transition-delay: 0.25s; }
+  .byod-motion-ready .byod-funnel.is-in .byod-bar.b3 { transition-delay: 0.5s; }
+}
+
+/* Animated numbers stay inline so each stat reads on one line */
+.byod-study strong .b-num {
+  display: inline;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+}
+.byod-study .byod-stat strong { white-space: nowrap; }
+
+@media (max-width: 700px) {
+  .byod-study .byod-video { aspect-ratio: auto; min-height: 0; }
+  .byod-study .byod-video .overlay { position: relative; inset: auto; padding: 36px 22px; }
+  .byod-study .byod-video .poster, .byod-study .byod-video video { z-index: 0; }
+  .byod-study .byod-video .overlay { z-index: 1; }
+  .byod-study .byod-play { width: 56px; height: 56px; }
+}

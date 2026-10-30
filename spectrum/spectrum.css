@@ -1,0 +1,985 @@
+/* Spectrum case study — single, consolidated stylesheet */
+
+.spectrum-study,
+.spectrum-study *,
+.spectrum-study *::before,
+.spectrum-study *::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+}
+
+.spectrum-study {
+  --spectrum-sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  --spectrum-serif: Georgia, "Times New Roman", serif;
+  --spectrum-blue: #0f2ddb;
+  --spectrum-navy: #101b43;
+  --spectrum-ink: #17191f;
+  --spectrum-muted: #666b78;
+  --spectrum-paper: #f7f7f5;
+  --spectrum-line: #e2e3e7;
+  --spectrum-pale: #eef1ff;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+  --space-8: 128px;
+
+  --text-max: none;
+  --container-max: 1120px;
+  --sidebar-width: 220px;
+  --section-pad: var(--space-7);
+  --title-lines: 3;
+
+  overflow-x: clip;
+  margin: 0;
+  background-color: var(--spectrum-paper);
+  color: var(--spectrum-ink);
+  font-family: var(--spectrum-sans);
+  font-synthesis: none;
+}
+
+/* ---------- Page grid + sidebar ---------- */
+
+.spectrum-study .case-layout,
+.spectrum-study .case-layout.is-nav-collapsed {
+  display: grid;
+  width: 100%;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-5);
+  margin: 0;
+  padding: var(--space-3) var(--space-6) 0;
+}
+
+.spectrum-study .case-layout.is-nav-collapsed {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.spectrum-study .case-content {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+.spectrum-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: 0;
+}
+
+.spectrum-study .case-sidebar {
+  position: sticky;
+  z-index: 3;
+  top: 90px;
+  align-self: start;
+  max-height: calc(100vh - 110px);
+  padding: 16px 14px;
+  overflow: auto;
+  border: 1px solid var(--spectrum-line);
+  border-radius: 10px;
+  background: var(--spectrum-paper);
+}
+
+.spectrum-study .case-sidebar-top {
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.spectrum-study .all-work {
+  justify-content: flex-start;
+  padding-inline: 8px;
+  color: #555b68;
+}
+
+.spectrum-study .all-work:hover,
+.spectrum-study .toc-toggle:hover {
+  background: var(--spectrum-pale);
+  color: var(--spectrum-blue);
+}
+
+.spectrum-study .detail-toc {
+  gap: 3px;
+}
+
+.spectrum-study .detail-toc a {
+  padding: 9px 10px;
+  border-left: 2px solid transparent;
+  border-radius: 4px;
+  color: #555b68;
+  font-size: 13px;
+  line-height: 1.4;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.spectrum-study .detail-toc a:hover,
+.spectrum-study .detail-toc a[aria-current="location"] {
+  border-left-color: var(--spectrum-blue);
+  background: var(--spectrum-pale);
+  color: var(--spectrum-blue);
+}
+
+.spectrum-study .case-layout.is-nav-collapsed .case-sidebar {
+  position: fixed;
+  z-index: 12;
+  top: 90px;
+  left: 12px;
+  width: 58px;
+  max-height: none;
+  padding: 8px;
+  overflow: visible;
+  box-shadow: 0 8px 24px rgb(23 25 31 / 10%);
+}
+
+.spectrum-study .case-layout.is-nav-collapsed .case-sidebar-top {
+  flex-direction: column;
+  align-items: center;
+}
+
+.spectrum-study .case-layout.is-nav-collapsed .all-work {
+  min-width: 40px;
+  padding: 0;
+}
+
+.spectrum-study .case-layout.is-nav-collapsed .all-work-label {
+  display: none;
+}
+
+.spectrum-study :focus-visible {
+  outline: 3px solid var(--spectrum-blue);
+  outline-offset: 4px;
+}
+
+/* ---------- Shared type ---------- */
+
+.spectrum-eyebrow,
+.spectrum-section-no,
+.spectrum-kicker {
+  margin: 0;
+  color: var(--spectrum-blue);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.spectrum-study h1,
+.spectrum-study h2,
+.spectrum-study h3,
+.spectrum-study h4 {
+  margin: 0;
+  color: var(--spectrum-ink);
+  font-family: var(--spectrum-serif) !important;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.spectrum-study h2 {
+  font-size: clamp(36px, 4.5vw, 56px);
+  letter-spacing: -0.035em;
+}
+
+.spectrum-study h3 {
+  font-size: clamp(27px, 3vw, 38px);
+  letter-spacing: -0.03em;
+}
+
+.spectrum-section p,
+.spectrum-section li {
+  margin: 0;
+  color: #555b68;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.spectrum-section p.spectrum-section-no,
+.spectrum-section p.spectrum-kicker {
+  color: var(--spectrum-blue);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.spectrum-dark-section p.spectrum-section-no {
+  color: #fff;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Hero ---------- */
+
+.spectrum-hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-top: var(--space-3);
+}
+
+.spectrum-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.spectrum-hero-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.spectrum-hero h1 {
+  font-size: clamp(44px, 4vw, 68px);
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.spectrum-hero-description {
+  margin: 0;
+  color: #555b68;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.spectrum-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.spectrum-hero-stat + .spectrum-hero-stat {
+  padding-left: var(--space-3);
+  border-left: 1px solid var(--spectrum-line);
+}
+
+.spectrum-hero-stat strong {
+  display: block;
+  color: var(--spectrum-blue);
+  font-size: clamp(36px, 3.6vw, 64px);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.spectrum-hero-stat > span {
+  display: block;
+  margin-top: var(--space-1);
+  color: #555b68;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.spectrum-hero-media {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  margin: 0;
+}
+
+.spectrum-hero-media img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.spectrum-meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+  padding: var(--space-3) 0 0;
+  border-top: 1px solid var(--spectrum-line);
+}
+
+.spectrum-meta > div {
+  min-width: 0;
+}
+
+.spectrum-meta dt {
+  margin-bottom: 5px;
+  color: #666b78;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.spectrum-meta dd {
+  margin: 0;
+  color: var(--spectrum-ink);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* ---------- Sections: one vertical stack, padding only ---------- */
+
+.spectrum-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: 0;
+  padding: var(--section-pad) 0 0;
+  scroll-margin-top: 100px;
+}
+
+.spectrum-section:last-of-type {
+  padding-bottom: var(--section-pad);
+}
+
+.spectrum-section-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.spectrum-section-head h2 {
+  max-width: none;
+}
+
+/* Text blocks use the shared reading width; media and cards span the container */
+.spectrum-section > p,
+.spectrum-panel > p {
+  max-width: none;
+}
+
+/* Intro text → next block is 48px (24px flex gap + 24px) */
+.spectrum-section > :is(.spectrum-approach-grid, .spectrum-decision-list, .spectrum-result-stats, .spectrum-opportunity-grid),
+.spectrum-panel > .spectrum-journey {
+  margin-top: var(--space-3);
+}
+
+/* ---------- 02 The challenge ---------- */
+
+.spectrum-dark-section .spectrum-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-6);
+  border-radius: 32px;
+  background-color: var(--spectrum-navy);
+  background-image: radial-gradient(circle, rgb(255 255 255 / 22%) 1px, transparent 1.2px);
+  background-size: 24px 24px;
+  color: #fff;
+}
+
+.spectrum-dark-section .spectrum-section-no,
+.spectrum-dark-section h2 {
+  color: #fff;
+}
+
+.spectrum-dark-section p,
+.spectrum-dark-section li {
+  color: #e4e8f4;
+}
+
+.spectrum-journey {
+  display: grid;
+  width: 100%;
+  gap: var(--space-2);
+}
+
+.spectrum-journey-row {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr) 48px minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-2);
+  color: #fff;
+  font-size: 14px;
+  text-align: left;
+}
+
+.spectrum-journey-label {
+  color: #b7c4f4;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.spectrum-journey-row > span:nth-child(2),
+.spectrum-journey-old,
+.spectrum-journey-new {
+  display: flex;
+  height: 56px;
+  align-items: center;
+  padding-inline: 20px;
+  border: 1px solid #44517c;
+  border-radius: 12px;
+  background: #1b2b5b;
+  color: #fff;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.spectrum-journey-new {
+  border-color: #dce3ff;
+  background: #dce3ff;
+  color: #182550;
+  font-weight: 500;
+}
+
+.spectrum-journey-arrow {
+  color: #aebbff;
+  font-size: 22px;
+  text-align: center;
+}
+
+.spectrum-challenge-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  width: 100%;
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.spectrum-challenge-points li {
+  padding-top: var(--space-2);
+  border-top: 1px solid rgb(255 255 255 / 20%);
+  font-size: 14px;
+}
+
+.spectrum-challenge-opportunity {
+  width: 100%;
+  max-width: none !important;
+  margin-top: var(--space-3) !important;
+  padding-top: var(--space-4);
+  border-top: 1px solid rgb(255 255 255 / 20%);
+}
+
+.spectrum-challenge-opportunity strong {
+  display: block;
+  margin-bottom: var(--space-1);
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.spectrum-challenge-opportunity {
+  font-size: 16px;
+}
+
+/* ---------- 03 Approach + 06 What's next cards ---------- */
+
+.spectrum-approach-grid,
+.spectrum-opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: var(--space-4);
+}
+
+.spectrum-approach-card,
+.spectrum-opportunity-card {
+  min-width: 0;
+  border: 1px solid var(--spectrum-line);
+  background: transparent;
+}
+
+.spectrum-approach-card summary,
+.spectrum-opportunity-card summary {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  cursor: pointer;
+  list-style: none;
+}
+
+.spectrum-approach-card summary::-webkit-details-marker,
+.spectrum-opportunity-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.spectrum-approach-card[open] summary,
+.spectrum-opportunity-card[open] summary {
+  border-bottom: 1px solid var(--spectrum-line);
+  background: #fff;
+}
+
+.spectrum-approach-number,
+.spectrum-opportunity-phase {
+  color: var(--spectrum-blue);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.spectrum-approach-title,
+.spectrum-opportunity-title {
+  min-height: calc(1.15em * var(--title-lines));
+  padding-right: var(--space-3);
+  color: var(--spectrum-ink);
+  font-family: var(--spectrum-serif);
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.spectrum-approach-summary,
+.spectrum-opportunity-summary {
+  color: #626775;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.spectrum-proposed-tag {
+  display: inline-flex;
+  width: fit-content;
+  padding: 5px 8px;
+  border: 1px solid var(--spectrum-blue);
+  border-radius: 999px;
+  color: var(--spectrum-blue);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.spectrum-disclosure-icon {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 21px;
+  height: 21px;
+  border: 1px solid #c9cbd2;
+  border-radius: 50%;
+}
+
+.spectrum-disclosure-icon::before,
+.spectrum-disclosure-icon::after {
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  width: 9px;
+  height: 1px;
+  background: var(--spectrum-ink);
+  content: "";
+}
+
+.spectrum-disclosure-icon::after {
+  transform: rotate(90deg);
+  transition: transform 250ms ease-out;
+}
+
+details[open] > summary .spectrum-disclosure-icon::after {
+  transform: rotate(0);
+}
+
+.spectrum-approach-card > ul,
+.spectrum-opportunity-details > ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0 0 0 var(--space-3);
+}
+
+.spectrum-approach-card > ul {
+  padding: var(--space-4) var(--space-4) var(--space-4) calc(var(--space-4) + var(--space-3));
+}
+
+.spectrum-approach-card li,
+.spectrum-opportunity-details li {
+  font-size: 14px;
+}
+
+.spectrum-opportunity-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.spectrum-opportunity-details > p {
+  font-size: 14px;
+}
+
+.spectrum-opportunity-preview {
+  --panel-height: 220px;
+  margin-top: auto;
+}
+
+.spectrum-opportunity-supporting-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.spectrum-learn-page-images {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.spectrum-opportunity-supporting-images figure,
+.spectrum-opportunity-expanded-image {
+  min-width: 0;
+  margin: 0;
+}
+
+.spectrum-opportunity-research {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-block: var(--space-3);
+  border-block: 1px solid var(--spectrum-line);
+}
+
+.spectrum-opportunity-research strong {
+  color: var(--spectrum-blue);
+  font-size: 42px;
+  letter-spacing: -0.07em;
+  line-height: 1;
+}
+
+.spectrum-opportunity-research p {
+  font-size: 13px;
+}
+
+.spectrum-learn-page-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+  padding-left: var(--space-3);
+}
+
+/* ---------- Image panels (one style) ---------- */
+
+.spectrum-image-panel {
+  --panel-height: 440px;
+  display: flex;
+  height: var(--panel-height);
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+}
+
+.spectrum-image-panel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+figcaption {
+  margin-top: var(--space-2);
+  color: var(--spectrum-muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* ---------- 04 Key design decisions ---------- */
+
+.spectrum-decision-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.spectrum-decision {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.spectrum-decision-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.spectrum-decision-copy h4 {
+  margin-top: 0;
+  font-family: var(--spectrum-sans) !important;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* Heading + paragraph pairs read as one block (24px between blocks) */
+.spectrum-decision-copy h4 + p {
+  margin-top: calc(var(--space-1) - var(--space-3));
+}
+
+.spectrum-decision-copy p:not(.spectrum-kicker) {
+  font-size: 15px;
+}
+
+.spectrum-decision-figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.spectrum-decision-figure .spectrum-image-panel {
+  height: auto;
+}
+
+.spectrum-decision-figure .spectrum-image-panel img {
+  height: auto;
+  max-height: 520px;
+}
+
+.spectrum-decision-figure figcaption {
+  margin-top: var(--space-1);
+}
+
+/* ---------- 05 Outcomes ---------- */
+
+.spectrum-result-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.spectrum-stat-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--spectrum-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.spectrum-stat-card strong {
+  color: var(--spectrum-blue);
+  font-size: clamp(54px, 6.5vw, 78px);
+  font-weight: 600;
+  letter-spacing: -0.075em;
+  line-height: 1;
+}
+
+.spectrum-stat-card p {
+  font-size: 14px;
+}
+
+/* ---------- 07 Reflection ---------- */
+
+.spectrum-reflection-close {
+  color: var(--spectrum-ink) !important;
+  font-family: var(--spectrum-serif);
+  font-size: 22px !important;
+  line-height: 1.45 !important;
+}
+
+/* ---------- Footer area ---------- */
+
+.spectrum-study .case-pagination {
+  margin-top: 0;
+}
+
+.spectrum-study .site-footer {
+  margin-top: 55px;
+}
+
+/* ---------- Expand/collapse animation ---------- */
+
+@supports selector(details::details-content) {
+  .spectrum-approach-card::details-content,
+  .spectrum-opportunity-card::details-content {
+    block-size: 0;
+    overflow: clip;
+    transition: block-size 320ms ease-out, content-visibility 320ms allow-discrete;
+  }
+
+  .spectrum-approach-card[open]::details-content,
+  .spectrum-opportunity-card[open]::details-content {
+    block-size: auto;
+  }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1360px) {
+  .spectrum-study {
+    --title-lines: 4;
+  }
+}
+
+@media (max-width: 1100px) {
+  .spectrum-study {
+    --section-pad: 72px;
+    --title-lines: 1;
+  }
+
+  .spectrum-study .case-layout,
+  .spectrum-study .case-layout.is-nav-collapsed {
+    display: block;
+    padding: 0 var(--space-3);
+  }
+
+  .spectrum-study .case-layout .case-sidebar,
+  .spectrum-study .case-layout.is-nav-collapsed .case-sidebar {
+    position: sticky;
+    z-index: 8;
+    top: 64px;
+    left: auto;
+    width: auto;
+    max-height: none;
+    margin: 0 calc(-1 * var(--space-3)) var(--space-3);
+    padding: 10px var(--space-3);
+    overflow-x: auto;
+    border-width: 0 0 1px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .spectrum-study .case-layout .case-sidebar-top,
+  .spectrum-study .case-layout.is-nav-collapsed .case-sidebar-top {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .spectrum-study .case-layout .detail-toc {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    overflow-x: auto;
+  }
+
+  .spectrum-study .case-layout.is-nav-collapsed .all-work-label {
+    display: inline;
+  }
+
+  .spectrum-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .spectrum-hero h1 {
+    font-size: clamp(44px, 9vw, 72px);
+  }
+
+  .spectrum-hero-stat strong {
+    font-size: clamp(40px, 7vw, 64px);
+  }
+
+  .spectrum-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .spectrum-approach-grid,
+  .spectrum-opportunity-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .spectrum-decision {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .spectrum-decision-figure {
+    order: -1;
+  }
+
+  .spectrum-opportunity-preview {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .spectrum-study {
+    --section-pad: 56px;
+  }
+
+  .spectrum-dark-section .spectrum-panel {
+    padding: var(--space-4);
+  }
+
+  .spectrum-journey-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-1);
+  }
+
+  .spectrum-journey-arrow {
+    text-align: left;
+    transform: rotate(90deg);
+    transform-origin: 12px 50%;
+  }
+
+  .spectrum-journey-row > span:nth-child(2),
+  .spectrum-journey-old,
+  .spectrum-journey-new {
+    width: 100%;
+  }
+
+  .spectrum-challenge-points,
+  .spectrum-result-stats,
+  .spectrum-opportunity-supporting-images {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .spectrum-hero-stats {
+    flex-direction: column;
+  }
+
+  .spectrum-hero-stat + .spectrum-hero-stat {
+    padding: var(--space-2) 0 0;
+    border-top: 1px solid var(--spectrum-line);
+    border-left: 0;
+  }
+
+  .spectrum-image-panel {
+    --panel-height: 280px;
+  }
+
+  .spectrum-approach-card summary,
+  .spectrum-opportunity-card summary,
+  .spectrum-opportunity-details {
+    padding: var(--space-3);
+  }
+
+  .spectrum-disclosure-icon {
+    top: var(--space-3);
+    right: var(--space-3);
+  }
+
+  .spectrum-opportunity-preview {
+    --panel-height: 220px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:has(body.spectrum-study) {
+    scroll-behavior: auto;
+  }
+
+  .spectrum-study .detail-toc a,
+  .spectrum-disclosure-icon::after,
+  .spectrum-approach-card::details-content,
+  .spectrum-opportunity-card::details-content {
+    transition: none;
+  }
+}

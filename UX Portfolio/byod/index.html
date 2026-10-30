@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A proposed BYOD purchasing experience for Spectrum Business Mobile, conceptualized with a developer and built as an interactive prototype.">
+    <title>Simplifying BYOD Ordering | Neda Rahimi</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../detail.css">
+    <link rel="stylesheet" href="../spectrum/spectrum.css">
+    <link rel="stylesheet" href="../verizon/verizon.css">
+    <link rel="stylesheet" href="byod.css">
+    <script src="byod-nav.js" defer></script>
+    <script src="../scroll-progress.js" defer></script>
+    <script src="../cursor.js" defer></script>
+  </head>
+  <body class="case-study-page spectrum-study verizon-study byod-study">
+    <div class="scroll-progress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <span></span>
+    </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Neda Rahimi home"><img src="../assets/neda-wordmark-nav.png" alt=""></a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="../about.html">About Me</a>
+        <a href="../index.html#projects">Portfolio</a>
+        <a href="../Rahimi%20Neda%20Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </header>
+    <main class="case-layout" id="main">
+      <aside class="case-sidebar" aria-label="Case study navigation">
+        <div class="case-sidebar-top">
+          <a class="all-work" href="../index.html#projects" aria-label="All work"><span aria-hidden="true">←</span><span class="all-work-label">All work</span></a>
+        </div>
+        <nav class="detail-toc" id="case-toc" aria-label="Case study sections">
+          <a href="#overview" aria-current="location">Overview</a>
+          <a href="#problem">The Problem</a>
+          <a href="#proposal">The Solution</a>
+          <a href="#reflection">Key Takeaways</a>
+        </nav>
+      </aside>
+      <div class="case-content spectrum-content">
+        <header class="spectrum-hero spectrum-container" id="overview" aria-labelledby="page-title">
+          <div class="spectrum-hero-grid">
+            <div class="spectrum-hero-copy">
+              <p class="spectrum-eyebrow">SPECTRUM BUSINESS · BYOD · PRODUCT CONCEPT</p>
+              <h1 id="page-title">Simplifying BYOD ordering for small businesses.</h1>
+              <p class="spectrum-hero-description">A proposed transaction-based purchasing experience that reimagines how small businesses configure multiple mobile lines, bring their own devices, and complete an order through one connected journey.</p>
+              <div class="spectrum-hero-stats">
+                <div class="spectrum-hero-stat">
+                  <strong aria-label="86 to 36"><span class="b-num" data-to="86">86</span> → <span class="b-num" data-to="36">36</span></strong>
+                  <span>Proposed steps, 4-line order</span>
+                </div>
+                <div class="spectrum-hero-stat">
+                  <strong aria-label="58 to 31"><span class="b-num" data-to="58">58</span> → <span class="b-num" data-to="31">31</span></strong>
+                  <span>Proposed steps, 2-line order</span>
+                </div>
+              </div>
+              <p class="byod-hero-cta"><a class="byod-btn" href="#prototype-video">Watch prototype</a></p>
+            </div>
+            <figure class="spectrum-hero-media">
+              <img src="../assets/byod-laptop.png" alt="Spectrum Business BYOD prototype shown on a laptop: the Device compatibility check step with line count, perks, and nickname, manufacturer and IMEI fields" width="2000" height="1212" fetchpriority="high">
+            </figure>
+          </div>
+          <dl class="spectrum-meta vz-meta byod-meta-wide" aria-label="Project details">
+            <div><dt>Role</dt><dd>UX Designer</dd></div>
+            <div><dt>Collaboration</dt><dd>Developer</dd></div>
+            <div><dt>Focus</dt><dd>Product conceptualization, proposal development, interaction design, AI-assisted prototyping</dd></div>
+            <div><dt>Tools</dt><dd>Claude, HTML prototype</dd></div>
+          </dl>
+        </header>
+
+        <section class="spectrum-container spectrum-section" id="problem" aria-labelledby="problem-title">
+          <div class="spectrum-section-head">
+            <p class="spectrum-section-no">01 / THE CHALLENGE</p>
+            <h2 id="problem-title">Customers were investing effort before they could see the value.</h2>
+          </div>
+          <p>The existing BYOD purchasing journey required customers to navigate multiple steps before fully understanding the offers, pricing, and savings available to them.</p>
+          <p>For small businesses purchasing multiple lines, the process introduced repeated interactions across device eligibility, plan configuration, and line setup.</p>
+          <p>The opportunity was to rethink the experience around the complete transaction rather than treating each line as an isolated purchase.</p>
+          <p>The goal was to make the journey more efficient, surface relevant information earlier, and help customers understand the value of their purchase before reaching checkout.</p>
+
+          <div class="byod-funnel" role="group" aria-labelledby="funnel-title">
+            <p class="spectrum-kicker">HISTORICAL PURCHASING FUNNEL · 68 DAYS</p>
+            <h3 id="funnel-title">A significant opportunity existed after device eligibility was confirmed.</h3>
+            <div class="byod-bar"><span>Eligible and compatible</span><strong><span class="b-num" data-to="1204" data-comma>1,204</span></strong></div>
+            <div class="byod-bar b2"><span>Committed to an order</span><strong><span class="b-num" data-to="709" data-comma>709</span></strong></div>
+            <div class="byod-bar b3"><span>Dropped off · 41.1% eligibility-to-order drop-off</span><strong><span class="b-num" data-to="495" data-comma>495</span></strong></div>
+            <p class="byod-note">Historical business data from the existing journey. It is not an outcome of the proposed prototype.</p>
+          </div>
+
+          <div class="byod-steps">
+            <div>
+              <p class="spectrum-kicker">2 BYOD LINES</p>
+              <div class="byod-compare"><span class="from b-num" data-to="58">58</span><span class="to b-num" data-to="31">31</span></div>
+              <small>Existing journey steps → proposed journey steps</small>
+            </div>
+            <div>
+              <p class="spectrum-kicker">4 BYOD LINES</p>
+              <div class="byod-compare"><span class="from b-num" data-to="86">86</span><span class="to b-num" data-to="36">36</span></div>
+              <small>Existing → proposed steps · an estimated 59.3% reduction</small>
+            </div>
+          </div>
+          <p class="byod-note">Proposed and modelled interaction-step counts from the transaction-based journey documentation, not measured customer time savings.</p>
+        </section>
+
+        <section class="spectrum-container spectrum-section" id="opportunity" aria-labelledby="opportunity-title">
+          <div class="spectrum-section-head">
+            <p class="spectrum-section-no">02 / RETHINKING THE EXPERIENCE</p>
+            <h2 id="opportunity-title">From repetitive steps to one connected transaction.</h2>
+          </div>
+          <p>Rather than asking customers to navigate a series of disconnected interactions, we explored how the purchasing experience could be organized around a single transaction.</p>
+          <p>The proposed direction focused on connecting device eligibility, line configuration, plan selection, and checkout into a more cohesive experience.</p>
+          <p>The intention was not simply to reduce the number of screens, but to make every interaction feel purposeful and give customers a clearer understanding of their purchase as they moved through the journey.</p>
+          <div class="vz-card-grid">
+            <article class="vz-card"><p class="spectrum-kicker">01 — VALUE BEFORE EFFORT</p><p>Surface relevant offers, promotions, and pricing earlier so customers can understand the value of their purchase.</p></article>
+            <article class="vz-card"><p class="spectrum-kicker">02 — SIMPLIFY REPEATED ACTIONS</p><p>Allow customers to configure multiple lines together instead of repeating the same selections individually.</p></article>
+            <article class="vz-card"><p class="spectrum-kicker">03 — MAINTAIN CONTEXT</p><p>Keep device eligibility, plan details, and pricing connected throughout the purchasing experience.</p></article>
+          </div>
+          <p class="spectrum-kicker vz-context-label">CURRENT VS. PROPOSED BYOD EXPERIENCE · RECREATED FROM THE PROPOSAL</p>
+          <div class="byod-journey" role="table" aria-label="Current versus proposed BYOD experience">
+            <div class="head"></div><div class="head">Offer discovery</div><div class="head">Pricing + promotions</div><div class="head">Journey friction</div><div class="head">Customer impact</div>
+            <div class="row-label cur">Current</div>
+            <div class="cur">Offers appear only after customers have already invested effort</div>
+            <div class="cur">Line-based value and promotion eligibility are hard to see upfront</div>
+            <div class="cur">Lines are handled one at a time, creating repeated steps</div>
+            <div class="cur">Value arrives late and the experience feels disconnected</div>
+            <div class="row-label pro">Proposed</div>
+            <div class="pro">Relevant, eligible offers appear immediately. Value is visible before effort.</div>
+            <div class="pro">Live pricing and benefits update by line count. Promotion eligibility is clear.</div>
+            <div class="pro">Context stays connected across every line. One path from qualification to checkout.</div>
+            <div class="pro">Value is visible and the experience feels connected</div>
+          </div>
+          <div class="spectrum-panel vz-panel">
+            <h3>The opportunity wasn't just to remove steps. It was to make the entire purchasing experience work together.</h3>
+          </div>
+        </section>
+
+        <section class="spectrum-container spectrum-section" id="proposal" aria-labelledby="proposal-title">
+          <div class="spectrum-section-head">
+            <p class="spectrum-section-no">03 / PRODUCT CONCEPTUALIZATION</p>
+            <h2 id="proposal-title">Designing a better way to purchase multiple BYOD lines.</h2>
+          </div>
+          <p>Working collaboratively with a developer, I helped conceptualize a new BYOD purchasing experience centered around the needs of small businesses.</p>
+          <p>We explored how customers could move through the entire purchase within one connected flow, reducing unnecessary repetition while making key decisions easier to understand.</p>
+          <p>I developed a proposal presentation to communicate the opportunity, proposed experience, and overall direction.</p>
+          <p>The proposal helped translate an abstract product opportunity into a tangible experience that could be explored, discussed, and further developed.</p>
+          <div class="vz-card-grid">
+            <article class="vz-card"><p class="spectrum-kicker">01 — A CONNECTED PURCHASING JOURNEY</p><p>Bring device qualification, configuration, plan selection, and checkout into one cohesive experience.</p></article>
+            <article class="vz-card"><p class="spectrum-kicker">02 — MULTI-LINE EFFICIENCY</p><p>Make it easier for customers purchasing several lines to repeat or apply compatible selections without starting over.</p></article>
+            <article class="vz-card"><p class="spectrum-kicker">03 — TRANSPARENT DECISION-MAKING</p><p>Present relevant information, pricing, and eligibility throughout the journey.</p></article>
+          </div>
+        </section>
+
+        <section class="spectrum-container spectrum-section" id="prototype" aria-labelledby="prototype-title">
+          <div class="spectrum-section-head">
+            <p class="spectrum-section-no">04 / BRINGING THE IDEA TO LIFE</p>
+            <h2 id="prototype-title">Turning the proposal into an interactive experience.</h2>
+          </div>
+          <p>To explore how the proposed experience could work in practice, I translated the product direction into an interactive HTML prototype.</p>
+          <p>Using Claude as an AI-assisted development tool, I built a working representation of the purchasing journey, bringing the proposed interactions and customer decisions to life.</p>
+          <p>Rather than presenting static screens, the prototype allowed the experience to be explored as a connected transaction, from entering device information through configuring multiple lines and reviewing the order.</p>
+          <p>This became an opportunity to examine not just how individual screens looked, but how the entire experience behaved.</p>
+
+          <div class="byod-video" id="prototype-video">
+            <!-- Replace with: <video controls poster="../assets/byod-entry.jpg"><source src="YOUR-VIDEO.mp4" type="video/mp4"></video> -->
+            <img class="poster" src="../assets/byod-entry.jpg" alt="" loading="lazy">
+            <div class="overlay">
+              <span class="byod-play" aria-hidden="true">▶</span>
+              <h3>Experience the proposed BYOD journey.</h3>
+              <p>Explore how customers can qualify devices, configure multiple lines, select plans, and move through a connected purchasing experience.</p>
+              <span class="tag">Walkthrough video coming soon</span>
+            </div>
+          </div>
+          <a class="byod-link" href="prototype.html">Explore the interactive prototype</a>
+
+          <div class="byod-split">
+            <div><p class="spectrum-kicker">01 — DEVICE ELIGIBILITY</p><p>Customers enter their existing device information and IMEI details to determine compatibility.</p></div>
+            <figure class="byod-shot"><img src="../assets/byod-compat.jpg" alt="Device and IMEI entry screen with nickname, manufacturer, and IMEI fields for each line" loading="lazy"></figure>
+          </div>
+          <div class="byod-split reverse">
+            <div><p class="spectrum-kicker">02 — MULTI-LINE CONFIGURATION</p><p>Customers configure multiple devices and lines within one connected purchasing flow.</p></div>
+            <figure class="byod-shot"><img src="../assets/byod-apply-before.jpg" alt="Multi-line configuration screen with an Apply to all banner above several lines" loading="lazy"></figure>
+          </div>
+          <div class="byod-split">
+            <div><p class="spectrum-kicker">03 — PLAN AND SERVICE SELECTION</p><p>Customers explore available plans, select phone numbers, and configure optional services.</p></div>
+            <figure class="byod-shot"><img src="../assets/byod-numbers.jpg" alt="Line configuration showing a kept phone number with carrier and number validation, and a new number for another line" loading="lazy"></figure>
+          </div>
+          <div class="byod-split reverse">
+            <div><p class="spectrum-kicker">04 — ORDER REVIEW AND CHECKOUT</p><p>Customers review the configured lines and associated pricing before proceeding through checkout.</p></div>
+            <figure class="byod-shot"><img src="../assets/byod-checkout.jpg" alt="Checkout screen with contact information and a mobile summary listing each line and the monthly total" loading="lazy"></figure>
+          </div>
+        </section>
+
+        <section class="spectrum-container spectrum-section" id="multiple-lines" aria-labelledby="multiple-lines-title">
+          <div class="spectrum-section-head">
+            <p class="spectrum-section-no">05 / INTERACTION DESIGN</p>
+            <h2 id="multiple-lines-title">Making repeated actions feel effortless.</h2>
+          </div>
+          <p>One of the key opportunities in the proposed experience was simplifying the configuration of multiple lines.</p>
+          <p>Rather than requiring customers to repeat similar selections across every device, the prototype explored ways to apply compatible configurations across multiple lines.</p>
+          <p>This was particularly important for small businesses purchasing several devices at once.</p>
+          <div class="spectrum-panel vz-panel">
+            <p class="spectrum-kicker">FEATURE SPOTLIGHT · APPLY TO ALL</p>
+            <h3>One selection. Multiple lines. Less repetition.</h3>
+            <p>The Apply to all interaction allows customers to carry compatible selections across multiple lines, reducing repetitive configuration and helping maintain consistency throughout the order.</p>
+          </div>
+          <div class="byod-pair">
+            <figure class="byod-shot"><img src="../assets/byod-apply-before.jpg" alt="Before: the first line is configured and an Apply to all banner offers to copy its plan, number, and protection to three other lines; the other lines are empty" loading="lazy"><figcaption>Before: one line configured, others empty.</figcaption></figure>
+            <figure class="byod-shot"><img src="../assets/byod-apply-after.jpg" alt="After: the same selections are filled in across the other lines" loading="lazy"><figcaption>After: selections carried across lines, each still editable.</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="spectrum-container spectrum-section" id="research" aria-labelledby="research-title">
+          <div class="spectrum-section-head">
+            <p class="spectrum-section-no">06 / PROJECT RESEARCH</p>
+            <h2 id="research-title">Putting the proposed experience to the test.</h2>
+          </div>
+          <p>The project team evaluated the proposed BYOD experience through usability testing with small-business customers. These findings come from the broader project team's research and are included here as supporting project evidence.</p>
+          <p>The documented findings provided insight into how customers understood the purchasing flow, which interactions felt intuitive, and where additional clarity was needed.</p>
+          <p>The results helped identify both the strengths of the proposed direction and opportunities for further refinement.</p>
+          <ul>
+            <li>Six U.S. small-business owners or co-owners who were primary decision-makers for internet and mobile purchases</li>
+            <li>Unmoderated desktop usability testing, October 21–26, 2026</li>
+            <li>A task involving five owned phones, Business Unlimited plans, and selecting new phone numbers</li>
+          </ul>
+          <div class="byod-stats">
+            <div class="byod-stat"><strong><span class="b-num" data-to="6" data-dec="0">6</span> of <span class="b-num" data-to="6" data-dec="0">6</span></strong><span>made positive unprompted remarks about the experience's simplicity or clarity</span></div>
+            <div class="byod-stat"><strong><span class="b-num" data-to="5" data-dec="0">5</span> of <span class="b-num" data-to="6" data-dec="0">6</span></strong><span>praised Apply to all</span></div>
+            <div class="byod-stat"><strong><span class="b-num" data-to="4.8" data-dec="1">4.8</span> / <span class="b-num" data-to="5" data-dec="0">5</span></strong><span>average ease rating for the process</span></div>
+            <div class="byod-stat"><strong><span class="b-num" data-to="5" data-dec="0">5</span> of <span class="b-num" data-to="6" data-dec="0">6</span></strong><span>found checkout clear and said nothing would stop them from ordering</span></div>
+            <div class="byod-stat"><strong><span class="b-num" data-to="6" data-dec="0">6</span> of <span class="b-num" data-to="6" data-dec="0">6</span></strong><span>understood what an IMEI is and where to find it</span></div>
+            <div class="byod-stat"><strong><span class="b-num" data-to="6" data-dec="0">6</span> of <span class="b-num" data-to="6" data-dec="0">6</span></strong><span>said the plan information was sufficient to decide</span></div>
+          </div>
+          <blockquote class="byod-quote">
+            <p>“I love that I could just copy and paste, like apply to all, that was actually really convenient and very time saving.”</p>
+            <cite>— Participant 2</cite>
+          </blockquote>
+          <figure class="byod-shot"><img src="../assets/byod-apply-after.jpg" alt="Apply to all result in the prototype, with selections carried across lines" loading="lazy"></figure>
+          <p class="byod-note">Research limitations: the study was directional and based on six participants. It does not imply statistical significance or a proven conversion improvement.</p>
+        </section>
+
+        <section class="spectrum-container spectrum-section" id="improvements" aria-labelledby="improvements-title">
+          <div class="spectrum-section-head">
+            <p class="spectrum-section-no">07 / DESIGN OPPORTUNITIES</p>
+            <h2 id="improvements-title">Making important information impossible to miss.</h2>
+          </div>
+          <p>Although the proposed experience tested positively overall, the research identified an important opportunity around communicating device incompatibility.</p>
+          <p>Participants generally understood compatibility messaging when they noticed it. However, the notification identifying an incompatible line was not prominent enough to consistently attract attention.</p>
+          <div class="byod-stats">
+            <div class="byod-stat"><strong><span class="b-num" data-to="2" data-dec="0">2</span> of <span class="b-num" data-to="6" data-dec="0">6</span></strong><span>participants independently noticed the incompatible-line notification without prompting</span></div>
+          </div>
+          <p>The other participants initially missed it. Some assumed the incompatibility was a typo or system error, while others wanted the issue resolved before proceeding to checkout.</p>
+          <div class="byod-pair">
+            <figure class="byod-shot"><img src="../assets/byod-incompatible.jpg" alt="Compatibility results where one line is flagged as not compatible with the network" loading="lazy"><figcaption>The incompatible-device state in the prototype.</figcaption></figure>
+            <figure class="byod-shot"><img src="../assets/byod-checkout.jpg" alt="Checkout screen where a small note near the top explains the incompatible line can be added back after checkout" loading="lazy"><figcaption>At checkout, the note about the incompatible line is easy to overlook.</figcaption></figure>
+          </div>
+          <p class="spectrum-kicker vz-context-label">PROPOSED NEXT STEPS · NOT YET DESIGNED OR TESTED</p>
+          <div class="vz-card-grid">
+            <article class="vz-card"><p class="spectrum-kicker">01 — IMPROVE VISIBILITY</p><p>Make incompatible-device notifications more prominent and easier to recognize.</p></article>
+            <article class="vz-card"><p class="spectrum-kicker">02 — CLARIFY COST IMPLICATIONS</p><p>Surface potential additional costs in the order summary so customers understand the impact of an incompatible line.</p></article>
+            <article class="vz-card"><p class="spectrum-kicker">03 — PROVIDE A CLEAR RESOLUTION</p><p>Explore ways to resolve or stage incompatible lines before customers proceed through checkout.</p></article>
+            <article class="vz-card"><p class="spectrum-kicker">04 — STRENGTHEN INTERACTION AFFORDANCES</p><p>Make controls such as Apply to all more immediately discoverable.</p></article>
+            <article class="vz-card"><p class="spectrum-kicker">05 — IMPROVE PRICING TRANSPARENCY</p><p>Clarify taxes, fees, and estimated monthly charges.</p></article>
+          </div>
+          <p class="byod-note">The study used hypothetical phones and a supplied invalid IMEI. These findings are directional and should be further validated using realistic incompatibility scenarios.</p>
+        </section>
+
+        <section class="spectrum-container spectrum-section spectrum-reflection" id="reflection" aria-labelledby="reflection-title">
+          <div class="spectrum-section-head">
+            <p class="spectrum-section-no">08 / KEY TAKEAWAYS</p>
+            <h2 id="reflection-title">Turning an idea into an experience customers could explore.</h2>
+          </div>
+          <p>This project reinforced the value of approaching product design beyond individual screens.</p>
+          <p>By collaborating with a developer to identify an opportunity in the BYOD purchasing journey, I was able to help translate an initial idea into a tangible product proposal and interactive experience.</p>
+          <p>Building the prototype using Claude also demonstrated how AI-assisted development can accelerate the process of exploring complex interactions and bringing product concepts to life.</p>
+          <p>The project highlighted the importance of designing around the complete customer transaction, reducing repetitive effort, and making critical information clear at every stage.</p>
+          <p>Most importantly, it showed how an idea can become much easier to evaluate, communicate, and improve once it exists as an experience people can actually interact with.</p>
+          <p class="spectrum-reflection-close byod-closing">Good product experiences don't just reduce friction. They make complex decisions feel simple.</p>
+        </section>
+
+      <nav class="case-pagination spectrum-container" aria-label="Other case studies">
+        <a href="../index.html#projects">All projects</a>
+        <a href="../spectrum/index.html">Next: Spectrum Business Mobile →</a>
+      </nav>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-name" href="../index.html">Neda Rahimi</a>
+      <p>Product Designer (UX &amp; UI)</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#projects">Case studies</a>
+        <a href="../about.html">About me</a>
+        <a href="https://www.linkedin.com/in/nedarahimi9/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </nav>
+    </footer>
+      <script src="byod-motion.js" defer></script>
+  </body>
+</html>
