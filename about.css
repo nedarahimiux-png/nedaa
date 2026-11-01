@@ -5,7 +5,6 @@
   --ab-muted: #5d5a55;
   --ab-serif: "Libre Baskerville", Georgia, serif;
   --ab-pad: max(6vw, calc((100vw - 1360px) / 2));
-  overflow-x: clip;
   background: var(--paper);
 }
 
@@ -1314,3 +1313,5 @@ figcaption {
   .ab-page .ab-band-labels li { font-size: 10.5px !important; letter-spacing: 0.08em; }
   .ab-page .ab-band-labels { gap: 6px 12px !important; padding-inline: 0; }
 }
+
+.ab-page main { overflow-x: clip; }
