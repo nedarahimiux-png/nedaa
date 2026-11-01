@@ -4,18 +4,14 @@ if (!location.hash) window.scrollTo({ top: 0, left: 0, behavior: "instant" });
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const taglineSegments = [...document.querySelectorAll(".tagline-segment")];
 const caret = document.querySelector(".tagline-caret");
-const heroStatus = document.querySelector(".hero-status");
 let typewriterFrame = 0;
 let typewriterTimeout = 0;
-
-const showStatus = () => heroStatus.classList.remove("is-pending");
 
 if (reduceMotion.matches) {
   taglineSegments.forEach((segment) => {
     segment.textContent = segment.dataset.copy;
   });
 } else {
-  heroStatus.classList.add("is-pending");
   const fullTagline = taglineSegments.map((segment) => segment.dataset.copy).join("");
   const charactersPerSecond = 25;
 
@@ -46,7 +42,6 @@ if (reduceMotion.matches) {
       }
 
       caret.classList.add("is-blinking");
-      showStatus();
     };
 
     typewriterFrame = window.requestAnimationFrame(typeTagline);
@@ -62,5 +57,4 @@ reduceMotion.addEventListener("change", (event) => {
     segment.textContent = segment.dataset.copy;
   });
   caret.classList.remove("is-blinking");
-  showStatus();
 });

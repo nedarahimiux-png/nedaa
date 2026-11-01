@@ -1062,10 +1062,6 @@ body::before {
   text-align: center;
 }
 
-.home-page .hero-status.is-pending {
-  opacity: 0;
-}
-
 .home-page .hero-status-key {
   color: var(--accent);
   font-weight: 700;
