@@ -459,8 +459,8 @@
 .byod-study .byod-carousel { margin-top: var(--space-3); }
 .byod-study .byod-carousel-track {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  overflow: hidden;
+  touch-action: pan-y;
   scrollbar-width: none;
   border: 1px solid #dfe3ee;
   border-radius: 12px;

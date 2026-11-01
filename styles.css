@@ -2023,4 +2023,5 @@ h6,
   .fx { opacity: 0; translate: 0 18px; transition: opacity 0.7s ease, translate 0.7s ease; }
   .fx.fx-in { opacity: 1; translate: none; }
   .fx.fx-instant { transition: none; }
+  .fx:is(.spectrum-panel, .byod-video), .fx:has(.spectrum-panel, .byod-video) { translate: none !important; }
 }
