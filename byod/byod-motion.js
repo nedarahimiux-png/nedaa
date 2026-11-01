@@ -33,3 +33,31 @@ if (!reduce && "IntersectionObserver" in window) {
   }, { threshold: 0.25 });
   targets.forEach((el) => io.observe(el));
 }
+
+document.querySelectorAll(".byod-carousel").forEach((root) => {
+  const track = root.querySelector(".byod-carousel-track");
+  const slides = [...track.children];
+  const dots = root.querySelector(".byod-carousel-dots");
+  const buttons = slides.map((_, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", `Go to slide ${i + 1}`);
+    b.addEventListener("click", () => go(i));
+    dots.appendChild(b);
+    return b;
+  });
+  const index = () => Math.round(track.scrollLeft / track.clientWidth);
+  const go = (i) => {
+    const n = Math.max(0, Math.min(slides.length - 1, i));
+    track.scrollTo({ left: n * track.clientWidth, behavior: reduce ? "auto" : "smooth" });
+  };
+  const sync = () => buttons.forEach((b, i) => b.setAttribute("aria-current", String(i === index())));
+  track.addEventListener("scroll", sync, { passive: true });
+  root.querySelector(".byod-carousel-prev").addEventListener("click", () => go(index() - 1));
+  root.querySelector(".byod-carousel-next").addEventListener("click", () => go(index() + 1));
+  root.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") go(index() - 1);
+    if (e.key === "ArrowRight") go(index() + 1);
+  });
+  sync();
+});

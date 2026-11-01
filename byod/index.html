@@ -7,9 +7,9 @@
     <title>Simplifying BYOD Ordering | Neda Rahimi</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../detail.css">
-    <link rel="stylesheet" href="../spectrum/spectrum.css">
+    <link rel="stylesheet" href="../spectrum/spectrum.css?v=2">
     <link rel="stylesheet" href="../verizon/verizon.css">
-    <link rel="stylesheet" href="byod.css">
+    <link rel="stylesheet" href="byod.css?v=2">
     <script src="byod-nav.js" defer></script>
     <script src="../scroll-progress.js" defer></script>
     <script src="../cursor.js" defer></script>
@@ -36,6 +36,7 @@
           <a href="#overview" aria-current="location">Overview</a>
           <a href="#problem">The Problem</a>
           <a href="#proposal">The Solution</a>
+          <a href="#different-directions">Different directions</a>
           <a href="#reflection">Key Takeaways</a>
         </nav>
       </aside>
@@ -70,6 +71,20 @@
           </dl>
         </header>
 
+        <section class="spectrum-container spectrum-contribution" aria-labelledby="contribution-title">
+          <h2 id="contribution-title">My contribution</h2>
+          <p>I came up with the initial idea with the Lead Principal Engineer. From there I:</p>
+          <ul>
+            <li>Mapped the current journey and designed a new one</li>
+            <li>Built an interactive prototype (with Claude)</li>
+            <li>Wrote the proposal deck and presented it to leadership</li>
+            <li>After it was approved, designed the full experience in Figma using our design system’s tokens, and componentized it</li>
+            <li>Handed it off to Product for development, and I’ve been answering their questions since</li>
+          </ul>
+          <p>Usability study: run by UXR. My part: helping create the testing brief.</p>
+          <p>Status: approved by leadership and handed off to Product. [Set to launch end of quarter]</p>
+        </section>
+
         <section class="spectrum-container spectrum-section" id="problem" aria-labelledby="problem-title">
           <div class="spectrum-section-head">
             <p class="spectrum-section-no">01 / THE CHALLENGE</p>
@@ -101,6 +116,10 @@
               <small>Existing → proposed steps · an estimated 59.3% reduction</small>
             </div>
           </div>
+          <figure class="byod-steps-figure">
+            <img src="../assets/byod-steps.png" alt="Diagram comparing the current and proposed BYOD step counts across the journey" width="2000" loading="lazy">
+            <figcaption><strong>What counts as a step.</strong> A step is each stage of the process, end to end, from starting a BYOD order to placing it. Screenshots below show the 4-line journey before and after.</figcaption>
+          </figure>
           <p class="byod-note">Proposed and modelled interaction-step counts from the transaction-based journey documentation, not measured customer time savings.</p>
         </section>
 
@@ -145,6 +164,19 @@
           <p>We explored how customers could move through the entire purchase within one connected flow, reducing unnecessary repetition while making key decisions easier to understand.</p>
           <p>I developed a proposal presentation to communicate the opportunity, proposed experience, and overall direction.</p>
           <p>The proposal helped translate an abstract product opportunity into a tangible experience that could be explored, discussed, and further developed.</p>
+          <div class="byod-carousel" role="region" aria-roledescription="carousel" aria-label="Proposal deck slides">
+            <div class="byod-carousel-track">
+              <figure class="byod-slide" role="group" aria-roledescription="slide" aria-label="1 of 3"><img src="../assets/byod-slide-2.jpg" alt="Proposal slide: simplified commerce journeys shaped around customer intent, with SB Mobile BYOD experience and SB Cable" loading="lazy"></figure>
+              <figure class="byod-slide" role="group" aria-roledescription="slide" aria-label="2 of 3"><img src="../assets/byod-slide-3.jpg" alt="Proposal deck slide 3" loading="lazy"></figure>
+              <figure class="byod-slide" role="group" aria-roledescription="slide" aria-label="3 of 3"><img src="../assets/byod-slide-4.jpg" alt="Proposal deck slide 4" loading="lazy"></figure>
+            </div>
+            <div class="byod-carousel-controls">
+              <button type="button" class="byod-carousel-prev" aria-label="Previous slide">←</button>
+              <div class="byod-carousel-dots"></div>
+              <button type="button" class="byod-carousel-next" aria-label="Next slide">→</button>
+            </div>
+          </div>
+          <p class="byod-caption">I wrote the deck that was presented to [audience, e.g. leadership]. It covered [the funnel drop-off, current vs. proposed journey, the prototype, and the ask]. It was approved, and the work moved into design and development.</p>
           <div class="vz-card-grid">
             <article class="vz-card"><p class="spectrum-kicker">01 — A CONNECTED PURCHASING JOURNEY</p><p>Bring device qualification, configuration, plan selection, and checkout into one cohesive experience.</p></article>
             <article class="vz-card"><p class="spectrum-kicker">02 — MULTI-LINE EFFICIENCY</p><p>Make it easier for customers purchasing several lines to repeat or apply compatible selections without starting over.</p></article>
@@ -173,6 +205,23 @@
             </div>
           </div>
           <a class="byod-link" href="prototype.html">Explore the interactive prototype</a>
+
+          <div id="different-directions" class="byod-directions">
+            <p class="spectrum-kicker">DIFFERENT DIRECTIONS</p>
+          <div class="byod-carousel" role="region" aria-roledescription="carousel" aria-label="Early prototype iterations">
+            <div class="byod-carousel-track">
+              <figure class="byod-slide" role="group" aria-roledescription="slide" aria-label="1 of 2"><img src="../assets/byod-iteration-1.png" alt="Early prototype iteration 1" loading="lazy"></figure>
+              <figure class="byod-slide" role="group" aria-roledescription="slide" aria-label="2 of 2"><img src="../assets/byod-iteration-2.png" alt="Early prototype iteration 2: How many lines are you bringing in?" loading="lazy"></figure>
+            </div>
+            <div class="byod-carousel-controls">
+              <button type="button" class="byod-carousel-prev" aria-label="Previous slide">←</button>
+              <div class="byod-carousel-dots"></div>
+              <button type="button" class="byod-carousel-next" aria-label="Next slide">→</button>
+            </div>
+          </div>
+            <p class="byod-caption">Early iterations of this prototype. You can see that the main goal was about the experience, not the look &amp; feel.</p>
+          </div>
+
 
           <div class="byod-split">
             <div><p class="spectrum-kicker">01 — DEVICE ELIGIBILITY</p><p>Customers enter their existing device information and IMEI details to determine compatibility.</p></div>
@@ -295,6 +344,6 @@
         <a href="https://www.linkedin.com/in/nedarahimi9/" target="_blank" rel="noreferrer">LinkedIn</a>
       </nav>
     </footer>
-      <script src="byod-motion.js" defer></script>
+      <script src="byod-motion.js?v=2" defer></script>
   </body>
 </html>

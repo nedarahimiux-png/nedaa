@@ -6,10 +6,12 @@ if (sectionNavigation) {
     overview: ["overview"],
     problem: ["problem", "opportunity"],
     proposal: ["proposal", "prototype", "multiple-lines", "research", "improvements"],
+    "different-directions": ["different-directions"],
     reflection: ["reflection"],
   };
   const sectionIds = Object.values(groups).flat();
-  const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+  const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean)
+    .sort((a, b) => (a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1));
 
   const setActive = () => {
     const line = window.innerHeight * 0.3;
