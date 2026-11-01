@@ -1,9 +1,10 @@
-@font-face { font-family: "Cardo"; src: url("assets/fonts/Cardo-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Cardo"; src: url("assets/fonts/Cardo-Italic.ttf") format("truetype"); font-weight: 400; font-style: italic; font-display: swap; }
-@font-face { font-family: "Cardo"; src: url("assets/fonts/Cardo-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Libre Baskerville"; src: url("assets/fonts/LibreBaskerville-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Libre Baskerville"; src: url("assets/fonts/LibreBaskerville-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Libre Baskerville"; src: url("assets/fonts/LibreBaskerville-BoldItalic.ttf") format("truetype"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Libre Baskerville"; src: url("assets/fonts/LibreBaskerville-BoldItalic.ttf") format("truetype"); font-weight: 700; font-style: italic; font-display: swap; }
 @font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-Light.otf") format("opentype"); font-weight: 300; font-style: normal; font-display: swap; }
 @font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-Regular.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-RegularItalic.otf") format("opentype"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-BoldItalic.otf") format("opentype"); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-Medium.otf") format("opentype"); font-weight: 500; font-style: normal; font-display: swap; }
 @font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-Bold.otf") format("opentype"); font-weight: 700; font-style: normal; font-display: swap; }
 @font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-BoldItalic.otf") format("opentype"); font-weight: 700; font-style: italic; font-display: swap; }
@@ -192,7 +193,7 @@ body.motion-ready .clarity-word.is-landed {
 .section-title {
   margin: 0 auto 52px;
   color: var(--ink);
-  font-family: "Cardo", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: clamp(31px, 3.2vw, 46px);
   font-weight: 400;
   line-height: 1.2;
@@ -231,7 +232,7 @@ body.motion-ready .clarity-word.is-landed {
 
 .project-copy h3 {
   margin: 0 0 15px;
-  font-family: "Cardo", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: clamp(28px, 2.4vw, 39px);
   font-weight: 400;
   line-height: 1.24;
@@ -282,7 +283,7 @@ body.motion-ready .clarity-word.is-landed {
 }
 
 .metric strong {
-  font-family: "Cardo", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: 32px;
   font-weight: 400;
   line-height: 1.15;
@@ -439,7 +440,7 @@ body.motion-ready .clarity-word.is-landed {
 .about-copy h3,
 .process-copy h3 {
   margin: 0 0 16px;
-  font-family: "Cardo", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 400;
 }
@@ -595,7 +596,7 @@ body.motion-ready .clarity-word.is-landed {
 }
 
 .footer-name {
-  font-family: "Cardo", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: 34px;
   text-decoration: none;
 }
@@ -1080,7 +1081,7 @@ body::before {
 
 .home-page .tagline-accent {
   color: var(--accent);
-  font-family: "Cardo", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   font-weight: 500;
 }
 
@@ -1239,7 +1240,7 @@ body::before {
   gap: 9px;
   margin: 0 0 18px;
   color: var(--blue);
-  font-family: "Cardo", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.045em;
@@ -1259,7 +1260,7 @@ body::before {
   max-width: 480px;
   margin: 0 0 18px;
   color: #14151a;
-  font-family: "Cardo", Georgia, serif !important;
+  font-family: "Libre Baskerville", Georgia, serif !important;
   font-size: clamp(30px, 3.1vw, 43px);
   font-weight: 400;
   letter-spacing: -0.035em;
@@ -1337,7 +1338,7 @@ body::before {
 
 .home-page .stat-value {
   color: #fff;
-  font-family: "Cardo", Georgia, serif !important;
+  font-family: "Libre Baskerville", Georgia, serif !important;
   font-size: 27px;
   font-weight: 400;
   letter-spacing: -0.035em;
@@ -1434,12 +1435,12 @@ body::before {
 .home-page h1,
 .home-page h2,
 .home-page .hero-label {
-  font-family: "Cardo", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
 }
 
 .home-page .hero-name,
 .home-page .section-title {
-  font-family: "Cardo", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
 }
 
 .home-page .hero-label {
@@ -1699,7 +1700,7 @@ h6,
 .project-type,
 .metric strong,
 .footer-name {
-  font-family: "Cardo", Georgia, serif !important;
+  font-family: "Libre Baskerville", Georgia, serif !important;
 }
 
 .button,
@@ -1849,7 +1850,7 @@ h6,
   position: static; min-width: 0; padding: 0; border-radius: 0; background: none; box-shadow: none;
   color: #14151a; align-items: inherit; transform: none !important;
 }
-.home-page .project-media .stat-value { color: var(--blue); font-family: "Cardo", Georgia, serif; font-size: clamp(30px, 3vw, 42px); font-weight: 400; letter-spacing: -0.03em; line-height: 1.1; }
+.home-page .project-media .stat-value { color: var(--blue); font-family: "Libre Baskerville", Georgia, serif; font-size: clamp(30px, 3vw, 42px); font-weight: 400; letter-spacing: -0.03em; line-height: 1.1; }
 .home-page .project-media .stat-label { color: #5e6069; font-size: 14px; opacity: 1; }
 .home-page .project-copy .project-info-pills { position: static; display: flex; flex-wrap: wrap; gap: 8px; max-width: none; margin: 0 0 18px; padding: 0; list-style: none; transform: none; }
 .home-page .project-copy .project-info-pills li { min-height: 0; padding: 4px 10px; font-size: 11px; background: #fff; border: 1px solid rgb(25 52 232 / 18%); box-shadow: none; cursor: default; transition: transform 220ms ease-out, background 220ms ease-out, border-color 220ms ease-out; }

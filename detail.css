@@ -259,7 +259,7 @@
 
 .detail-section h3 {
   margin: 0 0 10px;
-  font-family: "Cardo", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: clamp(23px, 2.8vw, 31px);
   font-weight: 400;
   line-height: 1.25;
@@ -326,7 +326,7 @@
 
 .detail-stats strong {
   color: var(--blue);
-  font-family: "Cardo", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: 30px;
   font-weight: 400;
 }
@@ -491,7 +491,7 @@
   display: block;
   margin-bottom: 5px;
   color: var(--blue);
-  font-family: "Cardo", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: 21px;
   font-weight: 400;
 }
@@ -629,7 +629,7 @@
   padding: 8px 0 8px 22px;
   border-left: 3px solid var(--blue);
   color: var(--ink);
-  font-family: "Cardo", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: 22px;
   line-height: 1.5;
 }

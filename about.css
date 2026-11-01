@@ -3,7 +3,7 @@
   --paper: #f6f3ec;
   --ab-ink: #101010;
   --ab-muted: #5d5a55;
-  --ab-serif: "Cardo", Georgia, serif;
+  --ab-serif: "Libre Baskerville", Georgia, serif;
   --ab-pad: max(6vw, calc((100vw - 1360px) / 2));
   overflow-x: clip;
   background: var(--paper);
@@ -959,7 +959,7 @@ figcaption {
   font-weight: 400;
   color: var(--blue);
 }
-.ab-lede em { font-style: normal; }
+.ab-lede em { font-style: italic; }
 .ab-wnd-nav button { font-family: var(--ab-sans); font-weight: 500; }
 .ab-wnd-nav button[aria-current="true"] { font-family: var(--ab-serif); font-weight: 400; }
 
@@ -1006,7 +1006,7 @@ figcaption {
   font-weight: 400 !important;
   color: var(--blue) !important;
 }
-.ab-page .ab-lede em { font-style: normal !important; }
+.ab-page .ab-lede em { font-style: italic !important; }
 .ab-page .ab-story-quote h2 em, .ab-page .ab-wnd h2 em, .ab-page .ab-signoff-copy em { font-style: italic !important; }
 .ab-page .ab-story-quote h2 { font-size: clamp(30px, 4.2vw, 62px); }
 .ab-page .ab-signoff-name, .ab-page .ab-signature, .ab-page [data-signature] { text-shadow: none !important; filter: none !important; }
