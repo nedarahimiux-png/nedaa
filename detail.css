@@ -829,10 +829,10 @@
   transform: none;
 }
 
-/* Dark sections: inverted dot grid, fixed to the viewport like the page dots */
+/* Dark sections: inverted dot grid that scrolls with the panel */
 .spectrum-panel,
 .byod-video {
   background-image: radial-gradient(circle, rgb(255 255 255 / 16%) 1px, transparent 1.2px) !important;
   background-size: 24px 24px !important;
-  background-attachment: fixed !important;
+  background-attachment: scroll !important;
 }
