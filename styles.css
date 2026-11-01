@@ -1053,8 +1053,6 @@ body::before {
 
 .home-page .hero-status {
   margin: clamp(22px, 3vh, 32px) 0 0;
-  opacity: 1;
-  transition: opacity 400ms ease;
   color: #24232b;
   font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
   font-size: clamp(12px, 1.15vw, 15px);
@@ -1960,4 +1958,25 @@ h6,
 /* mobile legibility */
 @media (max-width: 700px) {
   dt, .spectrum-journey-label, .spectrum-proposed-tag { font-size: 11px !important; }
+}
+
+/* Hero → Selected work spacing: 96px desktop, 64px mobile */
+.home-page .hero {
+  min-height: 0;
+  padding-bottom: 0;
+}
+
+.home-page .projects {
+  padding-top: 96px;
+}
+
+@media (max-width: 820px) {
+  .home-page .hero {
+    min-height: 0;
+    padding-bottom: 0;
+  }
+
+  .home-page .projects {
+    padding-top: 64px;
+  }
 }
