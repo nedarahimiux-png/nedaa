@@ -2016,3 +2016,10 @@ h6,
     scroll-margin-top: 64px;
   }
 }
+
+/* Scroll fade-in: runs once per element */
+@media (prefers-reduced-motion: no-preference) {
+  .fx { opacity: 0; translate: 0 18px; transition: opacity 0.7s ease, translate 0.7s ease; }
+  .fx.fx-in { opacity: 1; translate: 0 0; }
+  .fx.fx-instant { transition: none; }
+}
