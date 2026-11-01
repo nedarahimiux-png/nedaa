@@ -1993,3 +1993,14 @@ h6,
     padding-top: 64px;
   }
 }
+
+/* #top lands at the very top so the sticky nav doesn't cover the eyebrow */
+.home-page .hero {
+  scroll-margin-top: 68px;
+}
+
+@media (max-width: 820px) {
+  .home-page .hero {
+    scroll-margin-top: 64px;
+  }
+}
