@@ -1039,7 +1039,7 @@ body::before {
 
 .home-page .hero-tagline {
   width: min(100%, 900px);
-  min-height: 3.1em;
+  min-height: 4.7em;
   margin: clamp(24px, 3.5vh, 38px) 0 0;
   color: #34343b;
   font-size: clamp(18px, 2vw, 24px);
@@ -1047,6 +1047,21 @@ body::before {
   letter-spacing: 0.01em;
   line-height: 1.55;
   text-align: center;
+}
+
+.home-page .hero-status {
+  margin: clamp(20px, 3vh, 32px) 0 0;
+  color: #24232b;
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-size: clamp(12px, 1.15vw, 15px);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.home-page .hero-status-key {
+  color: var(--accent);
 }
 
 .home-page .tagline-accent {
@@ -1458,6 +1473,11 @@ body::before {
     letter-spacing: 0.17em;
   }
 
+  .home-page .hero-status {
+    font-size: 11px;
+    letter-spacing: 0.03em;
+  }
+
   .home-page .hero-wordmark {
     width: min(76vw, 410px);
     margin-top: 30px;
@@ -1470,7 +1490,7 @@ body::before {
 
   .home-page .hero-tagline {
     margin-top: 26px;
-    min-height: 5.3em;
+    min-height: 8em;
     font-size: 17px;
     line-height: 1.55;
   }
