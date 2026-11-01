@@ -838,7 +838,7 @@ figcaption {
   --ab-ink: #171717;
   --ab-muted: #858176;
   --ab-hand: "Caveat", cursive;
-  --ab-sans: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+  --ab-sans: "Creato Display", sans-serif;
   background: var(--paper);
   color: var(--ab-ink);
 }

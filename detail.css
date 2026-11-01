@@ -129,7 +129,7 @@
 
 .detail-title {
   margin: 0 0 18px;
-  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-family: "Creato Display", sans-serif;
   font-size: clamp(42px, 4.8vw, 64px);
   font-weight: 700;
   letter-spacing: -0.055em;
@@ -205,7 +205,7 @@
 .detail-section h2 {
   max-width: 850px;
   margin: 0 0 22px;
-  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-family: "Creato Display", sans-serif;
   font-size: clamp(34px, 4.2vw, 58px);
   font-weight: 700;
   letter-spacing: -0.045em;

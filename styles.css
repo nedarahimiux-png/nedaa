@@ -1,3 +1,11 @@
+@font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-Light.otf") format("opentype"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-Regular.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-RegularItalic.otf") format("opentype"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-Medium.otf") format("opentype"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-Bold.otf") format("opentype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-BoldItalic.otf") format("opentype"); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-ExtraBold.otf") format("opentype"); font-weight: 800; font-style: normal; font-display: swap; }
+
 :root {
   color-scheme: light;
   --blue: #1934e8;
@@ -7,7 +15,7 @@
   --ink: #101010;
   --muted: #65636a;
   --page-width: 1512px;
-  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-family: "Creato Display", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -1054,7 +1062,7 @@ body::before {
 .home-page .hero-status {
   margin: clamp(22px, 3vh, 32px) 0 0;
   color: #24232b;
-  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-family: "Creato Display", sans-serif;
   font-size: clamp(12px, 1.15vw, 15px);
   font-weight: 400;
   letter-spacing: 0.04em;
@@ -1259,7 +1267,7 @@ body::before {
   max-width: 480px;
   margin: 0;
   color: #5e6069;
-  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-family: "Creato Display", sans-serif;
   font-size: clamp(17px, 1.35vw, 18px);
   font-weight: 400;
   letter-spacing: 0;
@@ -1273,7 +1281,7 @@ body::before {
   padding: 0 0 5px;
   border-bottom: 2px solid var(--blue);
   color: #17181d;
-  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-family: "Creato Display", sans-serif;
   font-size: 16px;
   font-weight: 650;
   line-height: 1.4;
@@ -1432,7 +1440,7 @@ body::before {
 }
 
 .home-page .hero-label {
-  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-family: "Creato Display", sans-serif;
 }
 
 .home-page .project-type {
@@ -1789,7 +1797,7 @@ h6,
   background: #fff;
   box-shadow: 0 12px 30px rgb(25 52 232 / 16%);
   color: #17181d;
-  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-family: "Creato Display", sans-serif;
   font-size: 12px;
   font-weight: 600;
 }
@@ -1805,7 +1813,7 @@ h6,
 .home-page .project-soon {
   margin: 27px 0 0;
   color: #5b6070;
-  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-family: "Creato Display", sans-serif;
   font-size: 16px;
   font-weight: 600;
 }
