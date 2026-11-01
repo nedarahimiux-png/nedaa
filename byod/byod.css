@@ -40,7 +40,7 @@
 
 .byod-study .byod-split h3 {
   margin: 0 0 var(--space-2);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cardo", Georgia, serif;
   font-weight: 400;
 }
 
@@ -66,7 +66,7 @@
 .byod-study .byod-funnel h3,
 .byod-study .byod-steps h3 {
   margin: 0 0 var(--space-4);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cardo", Georgia, serif;
   font-weight: 400;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .byod-study .byod-bar strong {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cardo", Georgia, serif;
   font-size: 1.75rem;
   font-weight: 400;
 }
@@ -122,14 +122,14 @@
 }
 
 .byod-study .byod-compare .from {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cardo", Georgia, serif;
   font-size: 2.5rem;
   color: #8a91a6;
   text-decoration: line-through;
 }
 
 .byod-study .byod-compare .to {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cardo", Georgia, serif;
   font-size: 4rem;
   line-height: 1;
   color: #1d4ed8;
@@ -218,7 +218,7 @@
 .byod-study .byod-video h3 {
   margin: 0;
   color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cardo", Georgia, serif;
   font-weight: 400;
 }
 
@@ -264,7 +264,7 @@
 
 .byod-study .byod-stat strong {
   display: block;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cardo", Georgia, serif;
   font-size: 3.25rem;
   font-weight: 400;
   line-height: 1;
@@ -287,7 +287,7 @@
 
 .byod-study .byod-quote p {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cardo", Georgia, serif;
   font-size: 1.35rem;
   line-height: 1.45;
 }
@@ -301,7 +301,7 @@
 }
 
 .byod-study .byod-closing {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cardo", Georgia, serif;
   font-size: 1.75rem;
   line-height: 1.35;
 }
@@ -423,7 +423,7 @@
 .byod-study .spectrum-contribution { padding-top: var(--space-6); }
 .byod-study .spectrum-contribution h2 {
   margin: 0 0 var(--space-3);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Cardo", Georgia, serif;
   font-weight: 400;
   font-size: clamp(1.6rem, 2.4vw, 2.1rem);
   line-height: 1.2;

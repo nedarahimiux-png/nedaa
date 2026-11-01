@@ -3,7 +3,7 @@
   --paper: #f6f3ec;
   --ab-ink: #101010;
   --ab-muted: #5d5a55;
-  --ab-serif: Georgia, "Times New Roman", serif;
+  --ab-serif: "Cardo", Georgia, serif;
   --ab-pad: max(6vw, calc((100vw - 1360px) / 2));
   overflow-x: clip;
   background: var(--paper);
