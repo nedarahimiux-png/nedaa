@@ -1315,3 +1315,12 @@ figcaption {
 }
 
 .ab-page main { overflow-x: clip; }
+
+/* About page nav: solid, no see-through */
+.ab-page .site-header {
+  background: #f3f0e8;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-bottom: 1px solid rgb(23 23 23 / 8%);
+  box-shadow: 0 8px 24px -12px rgb(16 24 64 / 18%);
+}
