@@ -1240,11 +1240,12 @@ body::before {
   gap: 9px;
   margin: 0 0 18px;
   color: var(--blue);
-  font-family: "Libre Baskerville", Georgia, serif;
+  font-family: "Creato Display", "Helvetica Neue", Arial, sans-serif;
   font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.045em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   line-height: 1.55;
+  text-transform: none;
 }
 
 .home-page .project-tag > span {
