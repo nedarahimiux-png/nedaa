@@ -1050,11 +1050,11 @@ body::before {
 }
 
 .home-page .hero-status {
-  margin: clamp(20px, 3vh, 32px) 0 0;
+  margin: clamp(40px, 6vh, 64px) 0 0;
   color: #24232b;
   font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
   font-size: clamp(12px, 1.15vw, 15px);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.04em;
   line-height: 1.6;
   text-align: center;
@@ -1062,6 +1062,7 @@ body::before {
 
 .home-page .hero-status-key {
   color: var(--accent);
+  font-weight: 500;
 }
 
 .home-page .tagline-accent {
