@@ -1,20 +1,4 @@
 (() => {
-  // Keep dark-panel dots locked to the viewport grid, like the page dots.
-  const panels = [...document.querySelectorAll(".spectrum-panel, .byod-video")];
-  if (panels.length) {
-    const sync = () => {
-      for (const p of panels) {
-        const r = p.getBoundingClientRect();
-        if (r.bottom < -50 || r.top > innerHeight + 50) continue;
-        p.style.backgroundPosition = `${-r.left}px ${-r.top}px`;
-      }
-      requestAnimationFrame(sync);
-    };
-    requestAnimationFrame(sync);
-  }
-})();
-
-(() => {
   if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   const selector = [

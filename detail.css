@@ -829,10 +829,25 @@
   transform: none;
 }
 
-/* Dark sections: inverted dot grid that scrolls with the panel */
+/* Dark sections: a screen over the page; its dots are the page's fixed dot grid */
 .spectrum-panel,
 .byod-video {
-  background-image: radial-gradient(circle, rgb(255 255 255 / 16%) 1px, transparent 1.2px) !important;
-  background-size: 24px 24px !important;
-  background-attachment: scroll !important;
+  background-image: none !important;
+  isolation: isolate;
+  clip-path: inset(0 round 32px);
+}
+
+.byod-video {
+  clip-path: inset(0 round 14px);
+}
+
+.spectrum-panel::before,
+.byod-video::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background-image: radial-gradient(circle, rgb(255 255 255 / 16%) 1px, transparent 1.2px);
+  background-size: 24px 24px;
+  pointer-events: none;
 }
