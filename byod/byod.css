@@ -496,3 +496,15 @@
   background: #c9cfdd;
 }
 .byod-study .byod-carousel-dots button[aria-current="true"] { background: var(--spectrum-blue); }
+
+.byod-study .byod-demo {
+  margin-top: var(--space-5);
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.byod-study .byod-demo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
