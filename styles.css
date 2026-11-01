@@ -1,13 +1,13 @@
 @font-face { font-family: "Libre Baskerville"; src: url("assets/fonts/LibreBaskerville-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Libre Baskerville"; src: url("assets/fonts/LibreBaskerville-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: "Libre Baskerville"; src: url("assets/fonts/LibreBaskerville-BoldItalic.ttf") format("truetype"); font-weight: 400; font-style: italic; font-display: swap; }
-@font-face { font-family: "Libre Baskerville"; src: url("assets/fonts/LibreBaskerville-BoldItalic.ttf") format("truetype"); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Libre Baskerville"; src: url("assets/fonts/LibreBaskerville-SemiBoldItalic.ttf") format("truetype"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Libre Baskerville"; src: url("assets/fonts/LibreBaskerville-SemiBoldItalic.ttf") format("truetype"); font-weight: 700; font-style: italic; font-display: swap; }
 @font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-Light.otf") format("opentype"); font-weight: 300; font-style: normal; font-display: swap; }
 @font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-Regular.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-BoldItalic.otf") format("opentype"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-MediumItalic.otf") format("opentype"); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-Medium.otf") format("opentype"); font-weight: 500; font-style: normal; font-display: swap; }
 @font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-Bold.otf") format("opentype"); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-BoldItalic.otf") format("opentype"); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-MediumItalic.otf") format("opentype"); font-weight: 700; font-style: italic; font-display: swap; }
 @font-face { font-family: "Creato Display"; src: url("assets/fonts/CreatoDisplay-ExtraBold.otf") format("opentype"); font-weight: 800; font-style: normal; font-display: swap; }
 
 :root {
