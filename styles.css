@@ -2422,3 +2422,14 @@ h6,
 .home-page .projects .wip-card .wip-phone-front { left: 44%; }
 .home-page .projects .wip-card .wip-art,
 .home-page .projects .wip-card .wip-art:hover { box-shadow: none; }
+
+/* Coming-soon cards: smaller phones, no chip, accent note */
+.home-page .projects .wip-card .wip-phone { top: 14%; height: 72%; width: 26%; }
+.home-page .projects .wip-card .wip-phone-back { left: 28%; }
+.home-page .projects .wip-card .wip-phone-front { left: 46%; }
+.home-page .projects .wip-card .wip-art .project-stat { display: none !important; }
+.home-page .projects .project-card .project-soon {
+  color: var(--blue);
+  font-size: 17px;
+  font-weight: 700;
+}
