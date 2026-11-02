@@ -2326,3 +2326,21 @@ h6,
 }
 .home-page .projects .project-card.spectrum:hover .project-artwork img { transform: translateX(2.2%) !important; }
 .home-page .projects .project-card.spectrum .project-visual:hover .project-artwork img { transform: translateX(2.2%) scale(1.04) !important; }
+
+/* Spectrum card: final spec (texture on the panel itself, phones centered, subtle panel-only hover) */
+.home-page .projects .project-card.spectrum .project-visual {
+  background-color: #eef0fd;
+  background-image: linear-gradient(rgb(238 240 253 / 75%), rgb(238 240 253 / 75%)), url("assets/texture-paper.jpg");
+  background-size: auto, 700px auto;
+  background-blend-mode: normal, multiply;
+}
+.home-page .projects .project-card.spectrum .project-visual::before { content: none; display: none; }
+.home-page .projects .project-card.spectrum .project-artwork img {
+  display: block;
+  inset: -7% 0 auto 0;
+  height: 114%;
+  transform: translateX(2.2%);
+  transition: transform 450ms cubic-bezier(.2,.7,.2,1);
+}
+.home-page .projects .project-card.spectrum:hover .project-artwork img { transform: translateX(2.2%) !important; }
+.home-page .projects .project-card.spectrum .project-visual:hover .project-artwork img { transform: translateX(2.2%) translateY(-3%) scale(1.05) !important; }
