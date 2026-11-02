@@ -852,7 +852,7 @@
   pointer-events: none;
 }
 
-/* Mobile: no case-study side navigation */
-@media (max-width: 900px) {
+/* Mobile/tablet: no case-study side navigation, only the top nav bar */
+@media (max-width: 1100px) {
   .case-layout .case-sidebar { display: none !important; }
 }
