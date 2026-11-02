@@ -2277,3 +2277,15 @@ h6,
   .home-page .projects .project-card .project-visual { margin-bottom: 28px; }
 }
 .home-page .projects .project-card .project-visual .stat-label { text-transform: none; letter-spacing: 0; }
+
+/* Spectrum: transparent phones over a paper-texture panel */
+.home-page .projects .project-card.spectrum .project-visual {
+  background: #e6e4e3 url("assets/texture-paper.jpg") center / cover no-repeat;
+}
+.home-page .projects .project-card.spectrum .project-artwork img {
+  inset: 3% 0;
+  width: 100%;
+  height: 94%;
+  object-fit: contain;
+}
+.home-page .projects .project-card.spectrum .project-artwork img { inset: -6% 0; height: 112%; }
