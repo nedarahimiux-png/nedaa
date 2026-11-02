@@ -2359,5 +2359,5 @@ h6,
   transform: translate(-50%, -50%) !important;
 }
 .home-page .projects .project-card.spectrum .project-visual:hover .project-artwork img {
-  transform: translate(-50%, -52%) scale(1.04) !important;
+  transform: translate(-50%, -50%) scale(1.04) !important;
 }
