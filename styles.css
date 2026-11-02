@@ -2361,3 +2361,64 @@ h6,
 .home-page .projects .project-card.spectrum .project-visual:hover .project-artwork img {
   transform: translate(-50%, -50%) scale(1.04) !important;
 }
+
+/* All cards: pale blue panel with paper texture */
+.home-page .projects .project-card:is(:nth-of-type(odd), :nth-of-type(even)) .project-visual {
+  background-color: #eef0fd;
+  background-image: linear-gradient(rgb(238 240 253 / 75%), rgb(238 240 253 / 75%)), url("assets/texture-paper.jpg");
+  background-size: auto, 700px auto;
+  background-blend-mode: normal, multiply;
+}
+
+/* BYOD: slight grow on panel hover */
+.home-page .projects .project-card.byod-card .laptop-art .project-artwork img {
+  transition: transform 450ms cubic-bezier(.2,.7,.2,1);
+  transform: none !important;
+}
+.home-page .projects .project-card.byod-card .project-visual:hover .project-artwork img {
+  transform: scale(1.05) !important;
+}
+
+/* Verizon apps: screens 24px below the top edge, flush to the bottom; grow upward on panel hover */
+.home-page .projects .project-card.verizon-apps .project-visual {
+  overflow: visible;
+  clip-path: inset(-80px 0 0 0);
+}
+.home-page .projects .project-card.verizon-apps .project-artwork {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  pointer-events: none;
+  transform: none !important;
+}
+.home-page .projects .project-card.verizon-apps .project-artwork img {
+  position: absolute;
+  top: 24px;
+  width: 40cqw;
+  height: auto;
+  margin: 0;
+  border-radius: 13% 13% 0 0 / 6% 6% 0 0;
+  filter: none;
+  transform: none !important;
+  transition: top 450ms cubic-bezier(.2,.7,.2,1), width 450ms cubic-bezier(.2,.7,.2,1), left 450ms cubic-bezier(.2,.7,.2,1);
+}
+.home-page .projects .project-card.verizon-apps .project-artwork img:first-child { left: 9cqw; }
+.home-page .projects .project-card.verizon-apps .project-artwork img:last-child { left: 51cqw; }
+.home-page .projects .project-card.verizon-apps .project-visual:hover .project-artwork img {
+  top: -24px;
+  width: 45cqw;
+}
+.home-page .projects .project-card.verizon-apps .project-visual:hover .project-artwork img:first-child { left: 4cqw; }
+.home-page .projects .project-card.verizon-apps .project-visual:hover .project-artwork img:last-child { left: 51cqw; }
+
+/* Coming-soon cards: phones are back */
+.home-page .projects .wip-art > .wip-phone { display: block; }
+.home-page .projects .wip-art > .wip-phone-front { display: flex; }
+.home-page .projects .wip-card .wip-phone-back { left: 25%; }
+.home-page .projects .wip-card .wip-phone-front { left: 44%; }
+.home-page .projects .wip-card .wip-art,
+.home-page .projects .wip-card .wip-art:hover { box-shadow: none; }
