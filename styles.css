@@ -2317,3 +2317,12 @@ h6,
 .home-page .projects .project-card.spectrum .project-visual::before { opacity: 0.25; }
 .home-page .projects .project-card.spectrum:is(:nth-of-type(odd), :nth-of-type(even)) .project-visual { aspect-ratio: 16 / 10; }
 .home-page .projects .project-card.spectrum .project-artwork img { inset: -22% 0 -2% 0; height: 124%; }
+
+/* Spectrum: phones centered on the panel; subtle hover only on the panel itself */
+.home-page .projects .project-card.spectrum .project-artwork img {
+  inset: -15% 0 auto 0;
+  height: 130%;
+  transform: translateX(2.2%);
+}
+.home-page .projects .project-card.spectrum:hover .project-artwork img { transform: translateX(2.2%) !important; }
+.home-page .projects .project-card.spectrum .project-visual:hover .project-artwork img { transform: translateX(2.2%) scale(1.04) !important; }
