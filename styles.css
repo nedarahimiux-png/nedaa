@@ -2175,3 +2175,14 @@ h6,
   .home-page .projects .project-card .project-cta { order: 5; margin-top: 24px; align-self: flex-start; }
   .home-page .projects .project-card .stat-value { font-size: 34px; }
 }
+
+/* Alternate sides; Spectrum uses a full-bleed photo panel */
+@media (min-width: 901px) {
+  .home-page .projects .project-card:nth-of-type(even) { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+  .home-page .projects .project-card:nth-of-type(even) .project-copy > *,
+  .home-page .projects .project-card:nth-of-type(even) .project-stat { grid-column: 2; }
+  .home-page .projects .project-card:nth-of-type(even):is(:nth-of-type(odd), :nth-of-type(even)) .project-visual { grid-column: 1; }
+}
+.home-page .projects .project-card.spectrum .project-visual { background: #e9e4da; }
+.home-page .projects .project-card.spectrum .project-artwork { position: absolute; inset: 0; width: 100%; height: 100%; }
+.home-page .projects .project-card.spectrum .project-artwork img { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; object-fit: cover; transform: none; }
