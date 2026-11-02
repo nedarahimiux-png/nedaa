@@ -2314,3 +2314,6 @@ h6,
 @media (prefers-reduced-motion: reduce) {
   .home-page .projects .project-card.spectrum .project-artwork img { transition: none; }
 }
+.home-page .projects .project-card.spectrum .project-visual::before { opacity: 0.25; }
+.home-page .projects .project-card.spectrum:is(:nth-of-type(odd), :nth-of-type(even)) .project-visual { aspect-ratio: 16 / 10; }
+.home-page .projects .project-card.spectrum .project-artwork img { inset: -22% 0 -2% 0; height: 124%; }
