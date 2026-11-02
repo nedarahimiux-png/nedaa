@@ -1324,3 +1324,7 @@ figcaption {
   border-bottom: 1px solid rgb(23 23 23 / 8%);
   box-shadow: 0 8px 24px -12px rgb(16 24 64 / 18%);
 }
+
+@media (max-width: 700px) {
+  .ab-page .ab-title { top: 28px; }
+}

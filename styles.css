@@ -2433,3 +2433,7 @@ h6,
   font-size: 17px;
   font-weight: 700;
 }
+
+/* Home: double the space between the last case study and the footer */
+.home-page .projects { padding-bottom: 48px; }
+.home-page .site-footer { margin-top: 48px; }
