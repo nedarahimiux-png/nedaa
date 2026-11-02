@@ -851,3 +851,8 @@
   background-size: 24px 24px;
   pointer-events: none;
 }
+
+/* Mobile: no case-study side navigation */
+@media (max-width: 900px) {
+  .case-layout .case-sidebar { display: none !important; }
+}
